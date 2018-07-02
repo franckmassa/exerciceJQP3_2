@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <title>Exercice2</title>
+</head>
+<body>
+  <form class="" action="index.html" method="post">
+    <button type="button" name="buttonUp" id="buttonUp">+</button>
+    <button type="button" name="buttonDown" id="buttonDown">-</button>
+    <input type="text" name="result" id="result" />
+  </form>
+  <script src="assets/js/jquery-3.2.1.js"></script>
+  <script>
+  $(document).ready(function(){
+    //Déclaration de la variable d'initialisation du comptage
+    var count = 0;
+    //Déclaration de la fonction pour le comptage du nombre de clics et retour de la valeur dans le champs
+    $('#buttonUp').click (function(){
+      count++;
+      $('#result').val(count);
+    });
+    //Déclaration de la fonction pour le décomptage du nombre de clics et retour de la valeur dans le champs
+    $('#buttonDown').click (function(){
+      count--;
+      $('#result').val(count);
+    });
+  });
+  </script>
+</body>
+
+</html>
